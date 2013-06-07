@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6C01287C-A137-4A14-AEA9-94267CD58831}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>edsSharedLib2</RootNamespace>
+    <AssemblyName>edsSharedLib2</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DL\BPMUserDatabase.cs" />
+    <Compile Include="BL\User3.cs" />
+    <Compile Include="BL\Contracts\BusinessEntityBase.cs" />
+    <Compile Include="BL\Contracts\IBusinessEntity.cs" />
+    <Compile Include="BL\Managers\UserManager.cs" />
+    <Compile Include="DAL\DataManager.cs" />
+    <Compile Include="DL\SQLite.cs" />
+    <Compile Include="Constants\Cons.cs" />
+    <Compile Include="BL\BPReading.cs" />
+    <Compile Include="BL\Managers\BPReadingsManager.cs" />
+    <Compile Include="DAL\BPReadingsDataManager.cs" />
+    <Compile Include="DL\BPReadingsDatabase.cs" />
+    <Compile Include="Utils\edsUtilities.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="BL\" />
+    <Folder Include="DAL\" />
+    <Folder Include="DL\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Utils\" />
+  </ItemGroup>
+</Project>
