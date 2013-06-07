@@ -78,19 +78,31 @@ namespace edsSharedLib2UTests
 				setRetValue = "E1003:You have no access authority."+ "[" + usrAuthInp + "].";
 				break;
 				case 2:
-				// User is adminstrator
+				// User is adminstrator or registered user
 				switch (actReqested)
 				{
 				case 0:
 					// Dummy not used
 					setRetValue = "E1005:Action requested not available." + "[" + actReqested + "].";
 					break;
-					case 1:
+
+				case 1:
 					// get UserID
-					setRetValue = conUserID;
+					if ((usrAuthInp != (int)usrAuth.usrAuthRegUsr)
+						&& (usrAuthInp != (int)usrAuth.usrAuthAdmin)) {
+						setRetValue = "E9008:Reg Usr not allowed to get UserID.";
+						break;
+					}
+					setRetValue = "M9008:User ID [" + conUserID + "]";
 					break;
+
 					case 2:
 					// set UserID
+					if(usrAuthInp == (int)usrAuth.usrAuthRegUsr)
+					{
+						setRetValue = "E9008:Reg Usr not allowed to set UserID.";
+						break;
+					}
 					if (usrIdInp != "eg3805237g" && conUserID == "egEmpty")
 					{
 						conUserID = usrIdInp;
@@ -108,6 +120,9 @@ namespace edsSharedLib2UTests
 					break;
 				}
 				break;
+			case 5:
+				// Handle Register User -- go check action request validation block
+				goto case 2;
 				default:
 				// handle unanticipated value
 				setRetValue = "E1004:Unrecognized Auth Code." + "[" + usrAuthInp + "].";
@@ -161,12 +176,12 @@ namespace edsSharedLib2UTests
 			// Get User ID (1), no Access Auth=0
 //			string pUsrIdRetVal = SimpASClass.pUserID (1,0);
 
-			// Get User ID(1), Access Auth=1 (Registred User)
+			// Get User ID(1), Access Auth=5 (Registred User)
 			string pUsrIdRetVal = SimpASClass.pUserID (1,(int)usrAuth.usrAuthRegUsr);
-
+			string pUsrIdRetValEcode = pUsrIdRetVal.Substring (0, 5);
 			// Step 3 - Assert
-			string expected = "egEmpty";
-			Assert.AreEqual (expected, pUsrIdRetVal, "User Returned NOT egEmpty" +
+			string expected = "M9008";
+			Assert.AreEqual (expected, pUsrIdRetValEcode, "Value returned " +
 			                 "[" + pUsrIdRetVal + "].");
 
 		}

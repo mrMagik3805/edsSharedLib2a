@@ -1,17 +1,10 @@
-2013-06-06 17:28:25.217 edsSharedLib2UTests[1882:1803] MonoTouch: Socket error while connecting to MonoDevelop on 127.0.0.1:10000: Connection refused
-2013-06-06 17:30:47.205 edsSharedLib2UTests[1882:c07] [Runner executing:	edsSharedLib2UTests.SimpleAddSubtractToolTest.pUserID_Test_InvalidParms]
-2013-06-06 17:30:47.206 edsSharedLib2UTests[1882:c07] [MonoTouch Version:	6.2.7]
-2013-06-06 17:30:47.237 edsSharedLib2UTests[1882:c07] [iPhone Simulator:	iPhone OS v6.1]
-2013-06-06 17:30:47.239 edsSharedLib2UTests[1882:c07] [Device Name:	iPhone Simulator]
-2013-06-06 17:30:47.240 edsSharedLib2UTests[1882:c07] [Device UDID:	a58e711bb1005ac49ff5b4cfafeb68a400000000]
-2013-06-06 17:30:47.248 edsSharedLib2UTests[1882:c07] [Device Date/Time:	6/6/2013 5:30:47 PM]
-2013-06-06 17:30:47.249 edsSharedLib2UTests[1882:c07] [Bundle:	com.yourcompany.edssharedlib2utests]
-2013-06-06 17:30:47.273 edsSharedLib2UTests[1882:c07] 	[FAIL] pUserID_Test_InvalidParms :   User Returned NOT egEmpty[E1004:Unrecognized Auth Code.[5].].
-  Expected string length 7 but was 33. Strings differ at index 0.
-  Expected: "egEmpty"
-  But was:  "E1004:Unrecognized Auth Code.[5]."
-  -----------^
-2013-06-06 17:30:47.274 edsSharedLib2UTests[1882:c07] 		  at edsSharedLib2UTests.SimpleAddSubtractToolTest.pUserID_Test_InvalidParms () [0x0001a] in /Users/edwardgeldens/Dropbox/MiscStuff/edsSharedLib2/edsSharedLib2UTests/SimpleAddSubtractToolTest.cs:169 
-2013-06-06 17:30:47.274 edsSharedLib2UTests[1882:c07] 		  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
-2013-06-06 17:30:47.275 edsSharedLib2UTests[1882:c07] 		  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000c0] in /Developer/MonoTouch/Source/mono/mcs/class/corlib/System.Reflection/MonoMethod.cs:228 
-2013-06-06 17:30:47.278 edsSharedLib2UTests[1882:c07] Tests run: 1 Passed: 0 Inconclusive: 0 Failed: 1 Ignored: 0
+2013-06-07 11:25:16.984 edsSharedLib2UTests[1141:1903] MonoTouch: Socket error while connecting to MonoDevelop on 127.0.0.1:10000: Connection refused
+2013-06-07 11:25:31.002 edsSharedLib2UTests[1141:c07] [Runner executing:	edsSharedLib2UTests.SimpleAddSubtractToolTest.pUserID_Test_InvalidParms]
+2013-06-07 11:25:31.002 edsSharedLib2UTests[1141:c07] [MonoTouch Version:	6.2.7]
+2013-06-07 11:25:31.004 edsSharedLib2UTests[1141:c07] [iPhone Simulator:	iPhone OS v6.1]
+2013-06-07 11:25:31.004 edsSharedLib2UTests[1141:c07] [Device Name:	iPhone Simulator]
+2013-06-07 11:25:31.005 edsSharedLib2UTests[1141:c07] [Device UDID:	a58e711bb1005ac49ff5b4cfafeb68a400000000]
+2013-06-07 11:25:31.011 edsSharedLib2UTests[1141:c07] [Device Date/Time:	6/7/2013 11:25:30 AM]
+2013-06-07 11:25:31.012 edsSharedLib2UTests[1141:c07] [Bundle:	com.yourcompany.edssharedlib2utests]
+2013-06-07 11:25:31.029 edsSharedLib2UTests[1141:c07] 	[PASS] pUserID_Test_InvalidParms
+2013-06-07 11:25:31.033 edsSharedLib2UTests[1141:c07] Tests run: 1 Passed: 1 Inconclusive: 0 Failed: 0 Ignored: 0
